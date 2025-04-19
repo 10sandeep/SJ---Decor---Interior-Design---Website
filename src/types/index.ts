@@ -4,4 +4,6 @@ export interface Project {
   category: string;
   imageUrl: string;
   description: string;
+  client: string;
+  year: string;
 }
