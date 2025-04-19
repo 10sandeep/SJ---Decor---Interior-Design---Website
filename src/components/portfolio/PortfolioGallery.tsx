@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import ProjectCard from './ProjectCard';
+
 import { Project } from '../../types';
 import { motion, AnimatePresence } from 'framer-motion';
+import IMAGE1 from '../../assets/images/image1.jpg';
+import IMAGE2 from '../../assets/images/image2.jpg';
 
 const projects: Project[] = [
   {
@@ -60,19 +62,19 @@ const projects: Project[] = [
   },
   {
     id: 7,
-    title: 'Classic European Villa',
+    title: 'Modern Luxury Lounge',
     category: 'luxury',
-    imageUrl: 'https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'A timeless European-inspired villa with ornate details and traditional craftsmanship.',
+    imageUrl: IMAGE1,
+    description: 'A sleek, dark-toned living space with ambient lighting, a textured TV wall, and minimal decor—exuding modern luxury and sophistication.',
     client: 'Heritage Homes',
     year: '2023'
   },
   {
     id: 8,
-    title: 'Japanese Zen House',
+    title: 'Elegant Contemporary Living Room',
     category: 'minimal',
-    imageUrl: 'https://images.pexels.com/photos/6186465/pexels-photo-6186465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-    description: 'A peaceful residence inspired by Japanese minimalism and natural harmony.',
+    imageUrl: IMAGE2,
+    description: 'A warm, inviting space with soft lighting, wooden accents, and earthy tones—elevated by a floating TV unit, elegant chandelier, and lush indoor plants.',
     client: 'Tranquil Spaces',
     year: '2024'
   }
