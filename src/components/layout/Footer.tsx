@@ -9,9 +9,9 @@ const Footer: React.FC = () => {
           <div className="md:col-span-1">
             <div className="flex items-center mb-6">
               <span className="text-xl font-bold bg-gradient-to-r from-[#00EEFF] to-[#FF00AA] text-transparent bg-clip-text">
-                Zentharo
+                SJ
               </span>
-              <span className="ml-1 text-black text-lg">Creations</span>
+              <span className="ml-1 text-black text-lg">DECOR</span>
             </div>
             <p className="text-gray-600 mb-6 text-sm">
               Creating visionary interior spaces that transform how people live, work, and experience their surroundings.
@@ -86,7 +86,7 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-black/5 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} NOVA DESIGN. All rights reserved.
+            &copy; {new Date().getFullYear()} SJ DECOR. All rights reserved.
           </p>
           <div className="flex space-x-6">
             <a href="#" className="text-gray-500 hover:text-black transition-colors text-sm">Privacy Policy</a>
