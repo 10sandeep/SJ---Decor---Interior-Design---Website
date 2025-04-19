@@ -1,0 +1,91 @@
+/* Custom Cursor */
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #111;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #00EEFF, #FF00AA);
+  border-radius: 4px;
+}
+
+/* Animation Classes */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 4s ease infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+/* Light Mode Styles */
+.light-mode {
+  --bg-primary: #f8f9fa;
+  --text-primary: #121212;
+  --text-secondary: #555;
+  --card-bg: rgba(255, 255, 255, 0.7);
+  --card-border: rgba(0, 0, 0, 0.1);
+}
+
+/* Apply Light Mode Styles */
+.light-mode .bg-black {
+  background-color: var(--bg-primary);
+}
+
+.light-mode .bg-gray-900 {
+  background-color: #eef2f6;
+}
+
+.light-mode .text-white {
+  color: var(--text-primary);
+}
+
+.light-mode .text-gray-300,
+.light-mode .text-gray-400 {
+  color: var(--text-secondary);
+}
+
+.light-mode .bg-gray-800\/50,
+.light-mode .bg-gray-900\/50 {
+  background-color: var(--card-bg);
+}
+
+.light-mode .border-white\/10 {
+  border-color: var(--card-border);
+}
+
+/* Keep gradient text visible in light mode */
+.light-mode .bg-gradient-to-r.text-transparent.bg-clip-text {
+  filter: brightness(0.8);
+}
