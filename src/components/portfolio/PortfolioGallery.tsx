@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Project } from "../../types";
 import { motion, AnimatePresence } from "framer-motion";
-import IMAGE1 from "../../assets/interior 1.jpg"
+import IMAGE1 from "../../assets/interior 1.jpg";
 import IMAGE2 from "../../assets/interior 2.jpg";
-
-
 
 const projects: Project[] = [
   {
