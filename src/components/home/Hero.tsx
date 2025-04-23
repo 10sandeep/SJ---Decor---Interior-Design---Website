@@ -33,10 +33,21 @@ const Hero = () => {
       });
     }
   };
+  
+  const scrollToContact = () => {
+    const contactSection = document.querySelector("#contact");
+    if (contactSection) {
+      window.scrollTo({
+        top:
+          contactSection.getBoundingClientRect().top + window.scrollY - 100,
+        behavior: "smooth",
+      });
+    }
+  };
 
   const openWhatsApp = () => {
-    // Replace this with your actual WhatsApp number (without the + symbol)
-    const yourWhatsAppNumber = "+918456834944";
+    // Note: Remove the "+" symbol from the beginning of your number
+    const yourWhatsAppNumber = "918456834944";
     
     // Open WhatsApp chat directly with your number
     window.open(`https://wa.me/${yourWhatsAppNumber}`, "_blank");
@@ -68,10 +79,16 @@ const Hero = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-pink-500 text-white font-medium transform hover:scale-105 transition-all duration-300 shadow-lg">
+            <button 
+              onClick={scrollToPortfolio}
+              className="px-8 py-3 rounded-full bg-gradient-to-r from-cyan-400 to-pink-500 text-white font-medium transform hover:scale-105 transition-all duration-300 shadow-lg"
+            >
               View Portfolio
             </button>
-            <button className="px-8 py-3 rounded-full bg-transparent border border-white/30 backdrop-blur-lg text-white font-medium transform hover:scale-105 transition-all duration-300 hover:bg-white/10">
+            <button 
+              onClick={scrollToContact}
+              className="px-8 py-3 rounded-full bg-transparent border border-white/30 backdrop-blur-lg text-white font-medium transform hover:scale-105 transition-all duration-300 hover:bg-white/10"
+            >
               Contact Me
             </button>
           </div>

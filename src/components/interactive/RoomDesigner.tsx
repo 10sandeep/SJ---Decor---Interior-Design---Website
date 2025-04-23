@@ -74,7 +74,7 @@ const RoomDesigner: React.FC = () => {
   const currentStyle = roomStyles.find(style => style.id === roomStyle.id) || roomStyles[0];
   
   return (
-    <section className="py-24 bg-gradient-to-b from-gray-50 to-gray-100">
+    <section id='services' className="py-24 bg-gradient-to-b from-gray-50 to-gray-100">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <span className="inline-block px-5 py-2 rounded-full bg-amber-100 text-amber-800 text-sm font-medium mb-4 tracking-wide">

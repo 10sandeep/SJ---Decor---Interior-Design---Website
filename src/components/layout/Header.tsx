@@ -1,15 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X, Moon, Sun } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { NavLink } from "../ui/NavLink";
-import { useTheme } from "../../hooks/useTheme";
 import { Link, useLocation } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { theme, toggleTheme } = useTheme();
   const location = useLocation();
-  
+
   // Check if current page is gallery
   const isGalleryPage = location.pathname === "/gallary";
 
@@ -23,7 +21,8 @@ const Header: React.FC = () => {
   }, []);
 
   // Creating a common class for both Link and NavLink components
-  const linkClass = "text-gray-300 hover:text-white relative px-2 py-1 transition-all duration-300 group";
+  const linkClass =
+    "text-gray-300 hover:text-white relative px-2 py-1 transition-all duration-300 group";
 
   // Determine if header should have dark background (scrolled or gallery page)
   const shouldHaveDarkBackground = isScrolled || isGalleryPage;
@@ -47,10 +46,7 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              to="/" 
-              className={linkClass}
-            >
+            <Link to="/" className={linkClass}>
               <span className="relative z-10">Home</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00EEFF] to-[#FF00AA] transition-all duration-300 group-hover:w-full"></span>
             </Link>
@@ -58,39 +54,14 @@ const Header: React.FC = () => {
             <NavLink href="#about">About</NavLink>
             <NavLink href="#services">Services</NavLink>
             <NavLink href="#contact">Contact</NavLink>
-            <Link 
-              to="/gallary" 
-              className={linkClass}
-            >
+            <Link to="/gallary" className={linkClass}>
               <span className="relative z-10">Gallery</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#00EEFF] to-[#FF00AA] transition-all duration-300 group-hover:w-full"></span>
             </Link>
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-full bg-gray-800/50 hover:bg-gray-700/50 text-white transition-all duration-300"
-              aria-label={
-                theme === "dark"
-                  ? "Switch to light mode"
-                  : "Switch to dark mode"
-              }
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
           </nav>
 
           {/* Mobile Menu Toggle */}
           <div className="flex items-center md:hidden">
-            <button
-              onClick={toggleTheme}
-              className="p-2 mr-2 rounded-full bg-gray-800/50 hover:bg-gray-700/50 text-white transition-all duration-300"
-              aria-label={
-                theme === "dark"
-                  ? "Switch to light mode"
-                  : "Switch to dark mode"
-              }
-            >
-              {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2 rounded-full bg-gray-800/50 hover:bg-gray-700/50 text-white transition-all duration-300"
@@ -106,8 +77,8 @@ const Header: React.FC = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-xl py-4 shadow-xl animate-fadeIn">
           <nav className="flex flex-col space-y-4 px-8">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className={linkClass}
               onClick={() => setIsMobileMenuOpen(false)}
             >
@@ -120,10 +91,7 @@ const Header: React.FC = () => {
             >
               Portfolio
             </NavLink>
-            <NavLink 
-              href="#about" 
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
+            <NavLink href="#about" onClick={() => setIsMobileMenuOpen(false)}>
               About
             </NavLink>
             <NavLink
@@ -132,14 +100,11 @@ const Header: React.FC = () => {
             >
               Services
             </NavLink>
-            <NavLink 
-              href="#contact" 
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
+            <NavLink href="#contact" onClick={() => setIsMobileMenuOpen(false)}>
               Contact
             </NavLink>
-            <Link 
-              to="/gallary" 
+            <Link
+              to="/gallary"
               className={linkClass}
               onClick={() => setIsMobileMenuOpen(false)}
             >
