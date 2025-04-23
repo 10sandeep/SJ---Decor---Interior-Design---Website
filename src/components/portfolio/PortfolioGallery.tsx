@@ -238,27 +238,7 @@ const PortfolioGallery: React.FC = () => {
                             ?.name
                         }
                       </span>
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="text-pink-500 opacity-0 group-hover:opacity-100 transition-opacity text-sm font-medium flex items-center"
-                      >
-                        View Details
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          className="h-4 w-4 ml-1"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M9 5l7 7-7 7"
-                          />
-                        </svg>
-                      </motion.button>
+                      {/* View Details button removed */}
                     </div>
                   </div>
                 </div>
