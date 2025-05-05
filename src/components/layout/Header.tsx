@@ -41,7 +41,7 @@ const Header: React.FC = () => {
             <span className="text-2xl font-bold bg-gradient-to-r from-[#00EEFF] to-[#FF00AA] text-transparent bg-clip-text">
               SJ
             </span>
-            <span className="ml-2 text-white text-xl">DECOR</span>
+            <span className="ml-2 font-bold text-white text-xl">DECOR</span>
           </div>
 
           {/* Desktop Navigation */}

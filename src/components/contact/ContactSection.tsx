@@ -53,7 +53,9 @@ const ContactSection: React.FC = () => {
                   <div>
                     <p className="text-gray-500 text-sm uppercase tracking-wider font-light">Phone</p>
                     <a href="tel:+919876543210" className="text-black hover:text-amber-500 transition-colors">
-                      +91 98765 43210
+                    +91 7978044704 <br>
+                    </br>
+                    +91 824-9365217
                     </a>
                   </div>
                 </div>
@@ -66,8 +68,8 @@ const ContactSection: React.FC = () => {
                   <div>
                     <p className="text-gray-500 text-sm uppercase tracking-wider font-light">Studio Location</p>
                     <p className="text-black leading-relaxed">
-                      Design District, Bhubaneswar<br />
-                      Odisha, India 751001
+                    Uccha Sahi, Kesharpur, Buxi Bazar<br />
+                    Cuttack-753001
                     </p>
                   </div>
                 </div>

@@ -46,9 +46,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={
-            <div className="min-h-screen bg-black text-white">
+            
               <HomePage />
-            </div>
+            
           } />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/gallary" element={<GalleryPage />} />

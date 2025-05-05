@@ -74,7 +74,7 @@ const Hero = () => {
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+          <p className="text-xl md:text-2xl text-white mb-8 leading-relaxed">
             Creating spaces that inspire, transform, and elevate your lifestyle
           </p>
           
