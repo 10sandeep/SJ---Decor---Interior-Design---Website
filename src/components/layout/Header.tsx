@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { NavLink } from "../ui/NavLink";
 import { Link, useLocation } from "react-router-dom";
+import LOGO from '../../assets/Logo.jpg'
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -37,12 +38,14 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          <div className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-to-r from-[#00EEFF] to-[#FF00AA] text-transparent bg-clip-text">
-              SJ
-            </span>
-            <span className="ml-2 font-bold text-white text-xl">DECOR</span>
-          </div>
+        <Link to="/" className="flex items-center">
+  <img
+    src={LOGO}
+    alt="SJ Decor Logo"
+    className="h-10 w-auto object-contain rounded-md shadow-md"
+  />
+</Link>
+
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
