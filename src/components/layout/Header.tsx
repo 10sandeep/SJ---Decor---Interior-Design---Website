@@ -42,9 +42,10 @@ const Header: React.FC = () => {
   <img
     src={LOGO}
     alt="SJ Decor Logo"
-    className="h-10 w-auto object-contain rounded-md shadow-md"
+    className="h-16  object-contain rounded-md shadow-md"
   />
 </Link>
+
 
 
           {/* Desktop Navigation */}

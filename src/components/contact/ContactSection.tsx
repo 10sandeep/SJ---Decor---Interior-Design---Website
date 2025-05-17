@@ -40,7 +40,7 @@ const ContactSection: React.FC = () => {
                   <div>
                     <p className="text-gray-500 text-sm uppercase tracking-wider font-light">Email</p>
                     <a href="mailto:hello@elegantspaces.com" className="text-black hover:text-amber-500 transition-colors">
-                      hello@elegantspaces.com
+                      sjdecors25@gmail.com
                     </a>
                   </div>
                 </div>
