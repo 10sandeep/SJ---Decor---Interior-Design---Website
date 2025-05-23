@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { Project } from "../../types";
 import { motion, AnimatePresence } from "framer-motion";
-import IMAGE1 from "../../assets/interior 1.jpg";
-import IMAGE2 from "../../assets/interior 2.jpg";
+
 
 const projects: Project[] = [
   {
     id: 1,
-    title: "Minimalist Urban Loft",
+    title: "Wedding Pavilion",
     category: "minimal",
     imageUrl:
-      "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://res.cloudinary.com/djtgnaque/image/upload/v1747990414/IMG-20250401-WA0005_lvopoo.jpg",
     description:
-      "A sleek urban loft with minimalist design principles and abundant natural light.",
+      "A beautifully designed marriage pavilion that blends tradition with elegance, creating the perfect sacred space for timeless wedding rituals and unforgettable moments.",
     client: "Metropolis Living",
     year: "2024",
   },
@@ -21,10 +20,10 @@ const projects: Project[] = [
     title: "Modern Coastal Retreat",
     category: "modern",
     imageUrl:
-      "https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://res.cloudinary.com/djtgnaque/image/upload/v1747990415/IMG-20250418-WA0001_u5voo6.jpg",
     description:
       "A modern beachfront property with panoramic ocean views and clean architectural lines.",
-    client: "Oceanic Estates",
+    client: "RB Garments",
     year: "2023",
   },
   {
@@ -32,7 +31,7 @@ const projects: Project[] = [
     title: "Industrial Warehouse Conversion",
     category: "industrial",
     imageUrl:
-      "https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://res.cloudinary.com/djtgnaque/image/upload/v1747990414/IMG-20250418-WA0028_il1whd.jpg",
     description:
       "A converted warehouse space that maintains industrial elements while adding modern comforts.",
     client: "Urban Revival",
@@ -43,7 +42,7 @@ const projects: Project[] = [
     title: "Scandinavian Apartment",
     category: "minimal",
     imageUrl:
-      "https://images.pexels.com/photos/276583/pexels-photo-276583.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://res.cloudinary.com/djtgnaque/image/upload/v1747990414/IMG-20250418-WA0019_fcoqrz.jpg",
     description:
       "A bright Scandinavian-inspired apartment featuring natural materials and functional design.",
     client: "Nordic Living",
@@ -54,7 +53,7 @@ const projects: Project[] = [
     title: "Luxury Penthouse",
     category: "luxury",
     imageUrl:
-      "https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://res.cloudinary.com/djtgnaque/image/upload/v1747990414/IMG-20250418-WA0020_ilvjqa.jpg",
     description:
       "An opulent penthouse with panoramic city views and custom-designed furnishings.",
     client: "Elite Properties",
@@ -65,7 +64,7 @@ const projects: Project[] = [
     title: "Bohemian Studio",
     category: "eclectic",
     imageUrl:
-      "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://res.cloudinary.com/djtgnaque/image/upload/v1747990417/IMG-20250405-WA0001_xuyctt.jpg",
     description:
       "A vibrant bohemian studio filled with eclectic textures, patterns, and global influences.",
     client: "Creative Spaces",
@@ -75,7 +74,7 @@ const projects: Project[] = [
     id: 7,
     title: "Modern Luxury Lounge",
     category: "luxury",
-    imageUrl: IMAGE1,
+    imageUrl: "https://res.cloudinary.com/djtgnaque/image/upload/v1747990414/IMG-20250401-WA0015_1_pl6xsd.jpg",
     description:
       "A sleek, dark-toned living space with ambient lighting, a textured TV wall, and minimal decor—exuding modern luxury and sophistication.",
     client: "Heritage Homes",
@@ -83,12 +82,12 @@ const projects: Project[] = [
   },
   {
     id: 8,
-    title: "Elegant Contemporary Living Room",
+    title: "Elegant Contemporary Restaurant",
     category: "minimal",
-    imageUrl: IMAGE2,
+    imageUrl: "https://res.cloudinary.com/djtgnaque/image/upload/v1747990416/IMG-20250402-WA0008_ghbrof.jpg",
     description:
-      "A warm, inviting space with soft lighting, wooden accents, and earthy tones—elevated by a floating TV unit, elegant chandelier, and lush indoor plants.",
-    client: "Tranquil Spaces",
+      "A thoughtfully designed restaurant space that combines aesthetic elegance with functional comfort, creating a welcoming atmosphere for memorable dining experiences.",
+    client: "Shloka Restaurant",
     year: "2024",
   },
 ];

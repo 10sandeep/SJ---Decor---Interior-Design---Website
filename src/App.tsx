@@ -11,7 +11,25 @@ import InteriorDesignGallery from "./pages/InteriorDesignGallery";
 import Footer from "./components/layout/Footer";
 import "./App.css";
 
-// Create a HomePage component that contains all the main sections
+import { Cloudinary } from "@cloudinary/url-gen";
+import { auto } from "@cloudinary/url-gen/actions/resize";
+import { autoGravity } from "@cloudinary/url-gen/qualifiers/gravity";
+import { AdvancedImage } from "@cloudinary/react";
+
+// CloudinaryImage component
+const CloudinaryImage = () => {
+  const cld = new Cloudinary({ cloud: { cloudName: "dd80og2rl" } });
+
+  const img = cld
+    .image("cld-sample-5")
+    .format("auto")
+    .quality("auto")
+    .resize(auto().gravity(autoGravity()).width(500).height(500));
+
+  return <AdvancedImage cldImg={img} />;
+};
+
+// Home page component
 const HomePage = () => {
   return (
     <>
@@ -20,6 +38,7 @@ const HomePage = () => {
         <PortfolioGallery />
         <AboutSection />
         <RoomDesigner />
+        <CloudinaryImage /> {/* Integrated Cloudinary image here */}
         <ContactSection />
       </main>
       <Footer />
@@ -27,7 +46,7 @@ const HomePage = () => {
   );
 };
 
-// Create a GalleryPage component that only shows the gallery and footer
+// Gallery page component
 const GalleryPage = () => {
   return (
     <div className="bg-white text-black min-h-screen">
@@ -39,17 +58,14 @@ const GalleryPage = () => {
   );
 };
 
+// App component
 function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={
-            
-              <HomePage />
-            
-          } />
+          <Route path="/" element={<HomePage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/gallary" element={<GalleryPage />} />
           <Route path="/interior-design-gallery" element={<GalleryPage />} />
